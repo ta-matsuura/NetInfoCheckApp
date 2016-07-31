@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
                 } catch(NoSuchMethodError e) {
                     Log.e (TAG, "NoSuchMethodError : " + e.getMessage());
                 }
+
+                getLocalIpv4Address();
             }
         });
 
@@ -113,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
                 } catch(NoSuchMethodError e) {
                     Log.e (TAG, "NoSuchMethodError : " + e.getMessage());
                 }
+
+                getLocalIpv4Address();
             }
         });
     }
@@ -130,8 +134,12 @@ public class MainActivity extends AppCompatActivity {
                     if (!ipAddr.isLoopbackAddress() && netIf.isUp()) {
                         String networkInterfaceName = netIf.getName();
                         Log.d(TAG, "networkInterfaceName : " + networkInterfaceName);
-                        Log.d(TAG, "ipAddr_name : " + ipAddr.getHostName());
-                        Log.d(TAG, "ipAddr : " + ipAddr.getHostAddress());
+                        if (ipAddr.getHostAddress() != null) {
+                            Log.d(TAG, "ipAddr : " + ipAddr.getHostAddress());
+                        }
+//                        if (ipAddr.getHostName() != null) {
+//                            Log.d(TAG, "ipAddr_name : " + ipAddr.getHostName());
+//                        }
 
                     }
                 }
