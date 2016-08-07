@@ -11,51 +11,159 @@
         android:text="WifiInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="80dp"
         android:id="@+id/button"
         app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        android:layout_marginStart="16dp"
-        tools:layout_constraintLeft_creator="0"
+        android:layout_marginStart="10dp"
         app:layout_constraintTop_toTopOf="@+id/activity_main"
-        android:layout_marginTop="50dp"
-        tools:layout_constraintTop_creator="0"
+        android:layout_marginTop="20dp"
         app:layout_constraintRight_toRightOf="@+id/activity_main"
-        android:layout_marginEnd="16dp"
-        tools:layout_constraintRight_creator="0"/>
+        android:layout_marginEnd="16dp" />
 
     <Button
-        android:text="2.4G_APInfo"
+        android:text="2.4G AP Info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="80dp"
         android:id="@+id/button2"
         app:layout_constraintLeft_toLeftOf="@+id/activity_main"
         android:layout_marginStart="16dp"
-        tools:layout_constraintLeft_creator="0"
         app:layout_constraintTop_toTopOf="@+id/activity_main"
-        android:layout_marginTop="100dp"
-        tools:layout_constraintTop_creator="0"
+        android:layout_marginTop="80dp"
         app:layout_constraintRight_toRightOf="@+id/activity_main"
         android:layout_marginEnd="16dp"
-        tools:layout_constraintRight_creator="0"/>
+        app:layout_constraintHorizontal_bias="0.21" />
 
     <Button
-        android:text="5G_APInfo"
+        android:text="5G AP Info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="80dp"
         android:id="@+id/button3"
         app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        android:layout_marginStart="16dp"
-        tools:layout_constraintLeft_creator="0"
+        android:layout_marginStart="10dp"
         app:layout_constraintTop_toTopOf="@+id/activity_main"
-        android:layout_marginTop="150dp"
-        tools:layout_constraintTop_creator="0"
+        android:layout_marginTop="80dp"
         app:layout_constraintRight_toRightOf="@+id/activity_main"
         android:layout_marginEnd="16dp"
-        tools:layout_constraintRight_creator="0"/>
+        app:layout_constraintHorizontal_bias="0.79" />
 
+    <Button
+        android:text="get IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="128dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:text="Service check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="184dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:text="Wifi STA OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_wifi_sta_off"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="248dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.17" />
+
+    <Button
+        android:text="Wifi STA ON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_wifi_sta_on"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="248dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.84" />
+    <Button
+        android:text="Wifi2.4G AP OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_wifi_24ap_off"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="304dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.19" />
+    <Button
+        android:text="Wifi2.4G AP ON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_wifi_24ap_on"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="304dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.92" />
+    <Button
+        android:text="Wifi5G AP OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_wifi_5ap_off"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="368dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.21" />
+    <Button
+        android:text="Wifi5G AP ON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_wifi_5ap_on"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="368dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.88" />
+    <Button
+        android:text="Bluetooth OFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_bt_off"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="440dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.22" />
+    <Button
+        android:text="Bluetooth ON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_bt_on"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        android:layout_marginTop="440dp"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.87" />
 </android.support.constraint.ConstraintLayout>
