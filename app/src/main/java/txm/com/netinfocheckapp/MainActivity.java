@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         showBuildInfo();
-        telephonyInfo();
+        //telephonyInfo();
 
         wiman = (WifiManager)getApplication().getSystemService(WIFI_SERVICE);
 
