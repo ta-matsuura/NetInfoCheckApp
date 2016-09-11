@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 int rssi = wifiInfo.getRssi();
                 int level = WifiManager.calculateSignalLevel(rssi, 5);
                 Log.v(TAG, String.format("RSSI : %d / Level : %d/4", rssi, level));
+
+                Log.v(TAG, String.format("NetworkID : %s", wifiInfo.getNetworkId()));
+                Log.v(TAG, String.format("LinkSpeed : %s", wifiInfo.getLinkSpeed()));
             }
         });
 
@@ -235,6 +238,75 @@ public class MainActivity extends AppCompatActivity {
                 sendBroadcast(intent);
             }
         });
+        Button button_connectivity = (Button) findViewById(R.id.button_connectivity);
+        button_connectivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    startConnectivityTest230Over();
+                }
+                else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    startConnectivityTest();
+                }
+            }
+        });
+    }
+
+    private void startConnectivityTest() {
+        boolean waitNextTest;
+        TestConnectivityManagerApiLv21Over test = new TestConnectivityManagerApiLv21Over(getApplicationContext());
+
+        test.dotest1();
+        test.dotest2();
+        waitNextTest = test.dotest3();
+        // onAvailableがコールされたら先へ進める
+        // 但し、dotest3で失敗していた場合は待たない
+        int count = 0;
+        try {
+            while (waitNextTest) {
+                Thread.sleep(1000);
+                waitNextTest = test.getWaitFlag();
+                count++;
+                if(count > 60) {
+                    count = -1;
+                    break;
+                }
+            }
+        } catch (InterruptedException e) {
+            // TODO 自動生成された catch ブロック
+            e.printStackTrace();
+        }
+        test.dotest4(true);
+        test.dotest5();
+        test.dotest6();
+    }
+    private void startConnectivityTest230Over() {
+        boolean waitNextTest;
+        TestConnectivityManagerApiLv23Over test = new TestConnectivityManagerApiLv23Over(getApplicationContext());
+
+        test.dotest1();
+        test.dotest2();
+        waitNextTest = test.dotest3();
+        // onAvailableがコールされたら先へ進める
+        // 但し、dotest3で失敗していた場合は待たない
+        int count = 0;
+        try {
+            while (waitNextTest) {
+                Thread.sleep(1000);
+                waitNextTest = test.getWaitFlag();
+                count++;
+                if(count > 60) {
+                    count = -1;
+                    break;
+                }
+            }
+        } catch (InterruptedException e) {
+            // TODO 自動生成された catch ブロック
+            e.printStackTrace();
+        }
+        test.dotest4(true);
+        test.dotest5();
+        test.dotest6();
     }
 
     private void getLocalIpv4Address(){

@@ -195,7 +195,6 @@ public class WifiBtControllerService extends Service{
 
         //telephonyInfo();
 
-
         BluetoothAdapter mBtAdapter = BluetoothAdapter.getDefaultAdapter();
         WifiManager wifi = (WifiManager)getSystemService(WIFI_SERVICE);
         Log.v(TAG, "---------- Settings ----------------");
@@ -247,6 +246,10 @@ public class WifiBtControllerService extends Service{
         int level = WifiManager.calculateSignalLevel(rssi, 5);
         Log.v(TAG, String.format("RSSI : %d / Level : %d/4", rssi, level));
         Log.v(TAG, "");
+
+        Log.v(TAG, String.format("NetworkID : %s", wifiInfo.getNetworkId()));
+        Log.v(TAG, String.format("LinkSpeed : %s", wifiInfo.getLinkSpeed()));
+
 
         Log.v(TAG, "---------- Wifi AP(2.4G) ----------------");
         try {
